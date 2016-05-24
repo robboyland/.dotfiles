@@ -3,33 +3,10 @@ export PATH="~/.composer/vendor/bin:vendor/bin:/usr/local/git/bin:/Applications/
 
 HISTIGNORE="ll:history:pwd:cd ..:gs:gaa:..:phpunit:t"
 
-
-# [ Aliases ]
-
-# general
-alias ll="ls -lA"
-alias ..="cd .."
-
-# git
-alias gs="git status"
-alias ga="git add"
-alias gaa="git add ."
-alias gl="git log --oneline"
-alias gc="git commit -m"
-alias gd="git diff"
-
-# laravel
-alias art="php artisan"
-
-alias mmig="php artisan make:migration"
-alias mmod="php artisan make:model"
-alias mcon="php artisan make:controller"
-alias mreq="php artisan make:request"
-
-# vagrant
-alias vgs="vagrant global-status"
-alias vm="ssh vagrant@127.0.0.1 -p 2222"
-alias vssh="vagrant ssh"
+for file in ~/.dotfiles/.{aliases,functions}; do
+        [[ -r "$file" ]] && [[ -f "$file" ]] && source "$file"
+done
+unset file
 
 
 # [command prompt for git repos]
