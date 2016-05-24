@@ -1,6 +1,6 @@
 set nocompatible                                    " latest Vim settings & options
 
-so ~/.vim/plugins.vim
+so ~/.vim/.plugins.vim
 
 syntax enable
 set t_Co=256
