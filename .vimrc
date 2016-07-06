@@ -93,11 +93,19 @@ nmap <Leader>lm :!php artisan make:
 " make it easy to edit laravel snippets file
 nmap <Leader>els :tabedit /Users/robb/.vim/snippets/laravel.snippets<cr>
 
+" Laravel mappings
+
+" routes file
+nmap <Leader>lr :e app/Http/routes.php<cr>
+nmap <Leader>lm :! php artisan make:
 
 "------------Plugins------------"
 
 " nerdtree
 let NERDTreeHijackNetrw=0
+
+" nerdtree show dotfiles
+let NERDTreeShowHidden = 1
 
 " make NERDTree easier to toggle
 nmap <leader>1 :NERDTreeToggle<cr>
@@ -126,6 +134,8 @@ nnoremap <Leader>d :call pdv#DocumentWithSnip()<CR>
 set laststatus=2
 let g:airline_powerline_fonts = 1
 
+" ag
+nmap <Leader>a :Ag<space>
 
 "-------------Auto-Commands--------------"
 
@@ -147,5 +157,4 @@ autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
 autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
 
 autocmd FileType php set ft=php.laravel
-autocmd FileType php set ft=php.blade
 
